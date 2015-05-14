@@ -4,6 +4,7 @@ JustMeme is a NativeScript-built iOS and Android app for creating memes and shar
 
 ![](assets/ss.png)
 ![](assets/ss2.png)
+![](assets/ss3.png)
 
 ## Download
 
