@@ -2,9 +2,12 @@ var application = require("application");
 var imageSource = require("image-source");
 
 module.exports = {
-	addText: function(image, topText, bottomText, fontSize, isBlackText) {
-		topText = topText || "";
-		bottomText = bottomText || "";
+	addText: function(options) {
+		var topText = topText || "";
+		var bottomText = bottomText || "";
+		var isBlackText = options.isBlackText;
+		var fontSize = options.fontSize;
+		var image = options.image;
 
 		// Android makes you create a mutable Bitmap from an immutable one. Because Java.
 		var bitmap = image.android.copy(android.graphics.Bitmap.Config.ARGB_8888, true);

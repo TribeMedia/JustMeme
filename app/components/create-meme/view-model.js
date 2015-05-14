@@ -21,7 +21,13 @@ viewModel.prepareNewMeme = function(selectedImage) {
 };
 
 viewModel.refreshMeme = function () {
-	var image = imageManipulation.addText(viewModel.selectedImage, viewModel.topText, viewModel.bottomText, viewModel.fontSize, viewModel.isBlackText);
+	var image = imageManipulation.addText({
+		image: viewModel.selectedImage,
+		topText: viewModel.topText,
+		bottomText: viewModel.bottomText,
+		fontSize: viewModel.fontSize,
+		isBlackText: viewModel.isBlackText
+	});
 
 	viewModel.set("memeImage", image);
 };

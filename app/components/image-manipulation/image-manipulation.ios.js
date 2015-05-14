@@ -18,16 +18,17 @@ function drawTextOnImage(options) {
 }
 
 module.exports = {
-	addText: function(image, topText, bottomText, fontSize, isBlackText) {
-		topText = topText || "";
-		bottomText = bottomText || "";
-		fontSize = fontSize || 30;
+	addText: function(options) {
+		var topText = options.topText || "";
+		var bottomText = options.bottomText || "";
+		var fontSize = options.fontSize || 30;
+		var isBlackText = options.isBlackText;
 
 		// Set the font size to use for all text
 		font = UIFont.boldSystemFontOfSize(fontSize);
 
 		// Store off a reference to the UIImage
-		uiImage = image.ios;
+		uiImage = options.image.ios;
 
 		UIGraphicsBeginImageContext(uiImage.size);
 
