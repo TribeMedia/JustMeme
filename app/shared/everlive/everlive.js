@@ -1,4 +1,3 @@
-var imageSourceModule = require("image-source");
 var httpModule = require("http");
 var enumsModule = require("ui/enums");
 var analyticsMonitor = require("../analytics");
@@ -30,7 +29,7 @@ function _addTemplate (fileName, imageSource) {
 
 			//ERROR INTRODUCED ON PURPOSE.....
 			var result = JSON.parse(uploadResponse.content).Result;
-			
+
 			console.log("***** RESULT FROM EVERLIVE after:", result.Id);
 			_addTemplateToContentType(fileName, result.Id, result.Uri);
 		}).catch(function(error){
@@ -72,7 +71,7 @@ function _getFromEverlive(url) {
 		method: "GET",
 		url: url,
 		headers: {
-			'Content-Type': "application/json"
+			"Content-Type": "application/json"
 		}
 	};
 
@@ -85,7 +84,7 @@ function _postToEverlive(url, postBody) {
 		method: "POST",
 		url: url,
 		headers: {
-			'Content-Type': "application/json"
+			"Content-Type": "application/json"
 		},
 		content: JSON.stringify(postBody)
 	};

@@ -1,4 +1,3 @@
-var application = require("application");
 var imageSource = require("image-source");
 
 module.exports = {

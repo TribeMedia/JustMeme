@@ -1,5 +1,4 @@
 var applicationModule = require("application");
-var imageSourceModule = require("image-source");
 var cameraModule = require("camera");
 
 var navigation = require("../../shared/navigation");
@@ -28,7 +27,7 @@ exports.loaded = function(args) {
 	_viewData.set("imageSource", null);
 };
 
-exports.navigatedTo = function(args) {
+exports.navigatedTo = function() {
 	invokeCamera();
 };
 

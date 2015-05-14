@@ -37,11 +37,11 @@ exports.load = function(args) {
 	}
 };
 
-exports.unloaded = function(args){
+exports.unloaded = function() {
 	console.log("Home Unloaded Event Fired");
 };
 
-exports.navigatedTo = function(args){
+exports.navigatedTo = function() {
 	console.log("Home Navigated To Event Fired");
 
 	populateTemplates();
@@ -123,7 +123,7 @@ function shareMeme(imageSource) {
 
 function deleteMeme(imageFileName) {
 	localStorage.deleteMeme(imageFileName)
-		.then(function (result) {
+		.then(function() {
 			console.log("Meme Removed");
 
 			//Repopulate the screen

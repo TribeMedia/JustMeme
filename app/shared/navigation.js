@@ -33,8 +33,9 @@ module.exports = {
 		});
 	},
 	goBack: function () {
-		if(isHome === false)
+		if (isHome === false) {
 			frameModule.topmost().goBack();
+		}
 	},
 
 	showIOSNavigationBar: function() {

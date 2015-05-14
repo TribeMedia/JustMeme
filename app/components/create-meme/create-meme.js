@@ -12,7 +12,7 @@ exports.loaded = function(args) {
 	}
 };
 
-exports.navigatedTo = function(args) {
+exports.navigatedTo = function() {
 	//grab the image from the navigation context.
 	var selectedImage = _page.navigationContext;
 	createMemeViewModel.prepareNewMeme(selectedImage);
