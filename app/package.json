@@ -13,7 +13,8 @@
     "url": "https://github.com/NativeScript/JustMeme"
   },
   "dependencies": {
-    "marked": "^0.3.3"
+    "marked": "^0.3.3",
+    "nativescript-social-share": "^0.1.1"
   },
   "devDependencies": {
     "gulp": "^3.8.11",

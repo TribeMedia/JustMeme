@@ -8,7 +8,7 @@ var utils = require("utils/utils");
 var navigation = require( "../../shared/navigation");
 var templates = require( "../../shared/templates/templates");
 var localStorage = require( "../../shared/local-storage/local-storage");
-var socialShare = require("../social-share/social-share");
+var socialShare = require("../../node_modules/nativescript-social-share/social-share");
 var analyticsMonitor = require("../../shared/analytics");
 
 var _page;
@@ -118,7 +118,7 @@ function myMemesActionSheet (imageSource, imageFileName) {
 }
 
 function shareMeme(imageSource) {
-	socialShare.share(imageSource);
+	socialShare.shareImage(imageSource);
 }
 
 function deleteMeme(imageFileName) {

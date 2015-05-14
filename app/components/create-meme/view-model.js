@@ -1,6 +1,6 @@
 var imageManipulation = require("../image-manipulation/image-manipulation");
 var localStorage = require("../../shared/local-storage/local-storage");
-var socialShare = require("../social-share/social-share");
+var socialShare = require("../../node_modules/nativescript-social-share/social-share");
 var utilities = require("../../shared/utilities");
 var dialogsModule = require("ui/dialogs");
 var analyticsMonitor = require("../../shared/analytics");
@@ -52,7 +52,7 @@ viewModel.saveLocally = function () {
 
 viewModel.share = function() {
 	analyticsMonitor.trackFeature("CreateMeme.Share");
-	socialShare.share(this.memeImage);
+	socialShare.shareImage(this.memeImage);
 };
 
 //Add event listener to refresh the memeImage every time there is a change to the params
