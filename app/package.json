@@ -1,7 +1,6 @@
 {
   "name": "JustMeme",
   "main": "app.js",
-  "version": "0.11.0",
   "author": "Telerik <support@telerik.com>",
   "description": "JustMeme is the best Meme generator on the interwebs!",
   "license": "BSD",
@@ -11,9 +10,13 @@
     "template"
   ],
   "repository": {
-    "url": "https://github.com/NativeScript/NativeScript-NEXT-Workshop"
+    "url": "https://github.com/NativeScript/JustMeme"
   },
   "dependencies": {
     "marked": "^0.3.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-jshint": "^1.10.0"
   }
 }

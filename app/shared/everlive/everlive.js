@@ -15,7 +15,7 @@ module.exports = {
 	getTemplateImage: function(imageUrl) {
 		return _getTemplateImage(imageUrl);
 	}
-}
+};
 
 function _getTemplatesIndex() {
 	var getUrl = global.everliveFunctionBaseAddress + "/GetTemplates";
@@ -48,7 +48,7 @@ function _uploadFile (fileName, imageSource) {
 		"base64": imageSource.toBase64String(enumsModule.ImageFormat.png)
 	};
 
-	return _postToEverlive(postUrl, postBody)
+	return _postToEverlive(postUrl, postBody);
 }
 
 function _addTemplateToContentType (fileName, id, uri) {
@@ -63,7 +63,7 @@ function _addTemplateToContentType (fileName, id, uri) {
 	return _postToEverlive(postUrl, post_data);
 }
 
-function _getTemplateImage(imageUrl){
+function _getTemplateImage(imageUrl) {
 	return httpModule.getImage(imageUrl);
 }
 

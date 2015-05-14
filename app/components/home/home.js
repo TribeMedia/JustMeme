@@ -26,7 +26,7 @@ exports.load = function(args) {
 		navigationItem.setHidesBackButtonAnimated(true, false);
 
 		var navBar = controller.navigationBar;
-		navBar.barTintColor = UIColor.colorWithRedGreenBlueAlpha(.35, .90, .0, 1.0);
+		navBar.barTintColor = UIColor.colorWithRedGreenBlueAlpha(0.35, 0.90, 0.0, 1.0);
 		navBar.barStyle = 0;
 		navBar.tintColor = UIColor.blackColor();
 
@@ -54,7 +54,7 @@ exports.createNewTemplate = function() {
 };
 
 function populateTemplates() {
-	//Get our parrent element such that we can add our items to it dynamically
+	//Get our parent element such that we can add our items to it dynamically
 	var container = _page.getViewById("templateContainer");
 	clearOldMemes(container);
 
@@ -124,7 +124,7 @@ function shareMeme(imageSource) {
 function deleteMeme(imageFileName) {
 	localStorage.deleteMeme(imageFileName)
 		.then(function (result) {
-			console.log("Meme Removed")
+			console.log("Meme Removed");
 
 			//Repopulate the screen
 			populateMyMemes();
@@ -141,7 +141,7 @@ function deleteAllMemes() {
 		.then(function (result) {
 			if(result) {
 				localStorage.deleteAllMemes().then(function () {
-					console.log("Folder Cleared")
+					console.log("Folder Cleared");
 
 					//Repopulate the screen
 					populateMyMemes();

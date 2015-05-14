@@ -1,10 +1,8 @@
-
-
 module.exports = {
 	generateUUID: function () {
 		return _generateUUID();
 	}
-}
+};
 
 function _generateUUID() {
 	var d = new Date().getTime();
@@ -16,4 +14,4 @@ function _generateUUID() {
 	});
 
 	return uuid;
-};
+}

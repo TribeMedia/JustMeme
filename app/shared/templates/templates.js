@@ -16,9 +16,9 @@ module.exports = {
 		return _addNewPublicTemplate(fileName, imageSource);
 	},
 	addNewLocalTemplate: function(fileName, imageSource) {
-		return _addNewLocalTemplate(fileName, imageSource);	
+		return _addNewLocalTemplate(fileName, imageSource);
 	}
-}
+};
 
 function _addNewPublicTemplate(fileName, imageSource) {
 	localStorage.saveEverliveTemplateLocally(fileName, imageSource);
@@ -26,7 +26,7 @@ function _addNewPublicTemplate(fileName, imageSource) {
 }
 
 function _addNewLocalTemplate(fileName, imageSource) {
-	return localStorage.saveTemplateLocally(fileName, imageSource);	
+	return localStorage.saveTemplateLocally(fileName, imageSource);
 }
 
 function _getMyMemes(callback) {
@@ -55,7 +55,6 @@ function _getMyMemes(callback) {
 }
 
 function _getTemplates(callback) {
-	
 	localStorage.getAppTemplates()
 	.then(function(entities){
 		//Load the app templates

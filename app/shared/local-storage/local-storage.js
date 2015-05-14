@@ -43,7 +43,7 @@ module.exports = {
 	doesEverliveTemplateExist: function(imageFileName) {
 		return _doesEverliveTemplateExist(imageFileName);
 	}
-}
+};
 
 function _getMyMemes() {
 	return _recentMemeFolder.getEntities();
