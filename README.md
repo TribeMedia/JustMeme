@@ -17,6 +17,7 @@ This app was built with the [NativeScript CLI](https://github.com/NativeScript/n
 $ git clone https://github.com/NativeScript/JustMeme.git
 $ cd JustMeme
 $ tns platform add ios
+$ tns platform add android
 ```
 
 Next you'll have to switch to the `app` directory and install the necessary dependencies from npm:
@@ -31,6 +32,8 @@ And finally you can run the app on your device of choice:
 ```
 $ tns run ios --emulator
 ```
+
+### Linting
 
 JustMeme uses Gulp to automate JSHint for code linting. To run it just run `gulp` within the `app` directory:
 
