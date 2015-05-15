@@ -10,7 +10,7 @@ var _ = require("../../node_modules/lodash/index");
 
 function Meme() {
 	var that = this;
-	var debouncedRefresh = _.debounce(function() {
+	var debouncedRefresh = _.debounce(() => {
 		that.refresh();
 	}, 50, { leading: true });
 
