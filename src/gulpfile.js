@@ -1,4 +1,5 @@
 var gulp = require("gulp");
+var babel = require("gulp-babel");
 var jshint = require("gulp-jshint");
 
 gulp.task("jshint", function() {
