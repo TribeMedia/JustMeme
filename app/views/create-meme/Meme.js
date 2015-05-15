@@ -1,4 +1,3 @@
-var dialogsModule = require("ui/dialogs");
 var observable = require("data/observable");
 
 var imageManipulation = require("../../shared/image-manipulation/image-manipulation");
@@ -60,19 +59,7 @@ Meme.prototype.refresh = function () {
 Meme.prototype.save = function () {
 	analyticsMonitor.trackFeature("CreateMeme.SaveLocally");
 	this.refresh();
-	var saved = localStorage.saveLocally(this.uniqueImageName, this.memeImage);
-
-	if (!saved) {
-		console.log("New meme not saved....");
-	} else {
-		var options = {
-			title: "Meme Saved",
-			message: "Congratulations, Meme Saved!",
-			okButtonText: "OK"
-		};
-
-		dialogsModule.alert(options);
-	}
+	return localStorage.saveLocally(this.uniqueImageName, this.memeImage);
 };
 
 Meme.prototype.share = function() {
