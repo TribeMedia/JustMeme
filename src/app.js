@@ -1,8 +1,4 @@
 var application = require("application");
-var frameModule = require("ui/frame");
-var dialogsModule = require("ui/dialogs");
-
-var platformModule = require("platform");
 
 // Comment this to stop tracing
 
