@@ -4,7 +4,7 @@ var jshint = require("gulp-jshint");
 var watch = require("gulp-watch");
 
 gulp.task("jshint", function() {
-	return gulp.src(["components/**/*.js", "shared/**/*.js"])
+	return gulp.src(["shared/**/*.js", "views/**/*.js"])
 		.pipe(jshint())
 		.pipe(jshint.reporter());
 });
