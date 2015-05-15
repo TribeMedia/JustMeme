@@ -1,6 +1,7 @@
 var gulp = require("gulp");
 var babel = require("gulp-babel");
 var jshint = require("gulp-jshint");
+var watch = require("gulp-watch");
 
 gulp.task("jshint", function() {
 	return gulp.src(["components/**/*.js", "shared/**/*.js"])
@@ -34,4 +35,11 @@ gulp.task("copy", function() {
 		.pipe(gulp.dest("../app/"));
 });
 
-gulp.task( "default", ["copy", "babel"]);
+gulp.task("watch", ["copy", "babel"], function() {
+	gulp.watch([
+		"./shared/**/*.js",
+		"./views/**/*.js"
+	], ["copy", "babel"]);
+});
+
+gulp.task( "default", ["watch"]);
