@@ -1,5 +1,6 @@
 var frameModule = require("ui/frame");
 var applicationModule = require("application");
+var isHome;
 
 module.exports = {
 	goHome: function () {

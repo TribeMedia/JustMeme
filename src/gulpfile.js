@@ -8,21 +8,30 @@ gulp.task("jshint", function() {
 		.pipe(jshint.reporter());
 });
 
-gulp.task("build", function() {
+gulp.task("babel", function() {
 	gulp.src([
-		// "./App_Resources/**/*",
-		// "./images/**/*",
-		// "./libs/**/*",
-		// "./node_modules/lodash/index.js",
-		// "./node_modules/marked/marked.min.js",
-		// "./node_modules/nativescript-social-share/*.js",
-		// "./shared/**/*",
-		// "./tns_modules/**/*",
-		// "./views/**/*",
-		// "./app.css",
-		// "./app.js"
-		"**/*"
-	], { base: "./" }).pipe(gulp.dest("../app/"));
+		"./shared/**/*.js",
+		"./views/**/*.js",
+	], { base: "./" })
+		.pipe(babel())
+		.pipe(gulp.dest("../app/"));
 });
 
-gulp.task( "default", ["build"]);
+gulp.task("copy", function() {
+	gulp.src([
+		"./App_Resources/**/*",
+		"./images/**/*",
+		"./libs/**/*",
+		"./node_modules/lodash/index.js",
+		"./node_modules/marked/marked.min.js",
+		"./node_modules/nativescript-social-share/*.js",
+		"./tns_modules/**/*",
+		"./views/**/*.{xml,css,md}",
+		"./app.css",
+		"./app.js",
+		"package.json"
+	], { base: "./" })
+		.pipe(gulp.dest("../app/"));
+});
+
+gulp.task( "default", ["copy", "babel"]);
