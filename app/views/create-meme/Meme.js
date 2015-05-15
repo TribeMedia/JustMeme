@@ -1,7 +1,7 @@
 var dialogsModule = require("ui/dialogs");
 var observable = require("data/observable");
 
-var imageManipulation = require("../image-manipulation/image-manipulation");
+var imageManipulation = require("../../shared/image-manipulation/image-manipulation");
 var localStorage = require("../../shared/local-storage/local-storage");
 var utilities = require("../../shared/utilities");
 var analyticsMonitor = require("../../shared/analytics");

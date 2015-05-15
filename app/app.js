@@ -19,7 +19,7 @@ trace.setCategories(trace.categories.concat(
     ));
 */
 
-application.mainModule = "./components/splashscreen/splashscreen";
+application.mainModule = "./views/splashscreen/splashscreen";
 application.cssFile = "./app.css";
 
 // Application Events: https://github.com/NativeScript/docs/tree/master/ApiReference/application
@@ -47,7 +47,7 @@ application.onUncaughtError = function (error) {
 };
 
 global.appVersion = "1.3";
-global.baseViewDirectory = "./components/";
+global.baseViewDirectory = "./views/";
 global.recentMemeFolderName = "myMemes";
 
 global.appTemplateFolderName = "./images/templates";
