@@ -1,6 +1,7 @@
 <Page 
 	xmlns="http://www.nativescript.org/tns.xsd"
-	loaded="loaded" 
+	loaded="loaded"
+	unloaded="unloaded"
 	navigatedTo="navigatedTo">
 	
 	<ScrollView>
@@ -17,7 +18,7 @@
 				<Switch row="1" col="1" cssClass="settingsRight" checked="{{ isBlackText }}" />
 			</GridLayout>
 			
-			<Button text="Save" tap="{{ saveLocally }}" />
+			<Button text="Save" tap="{{ save }}" />
 			<Button text="Share" tap="{{ share }}" />
 		</StackLayout>
 	</ScrollView>

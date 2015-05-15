@@ -1,19 +1,26 @@
 var applicationModule = require("application");
-var createMemeViewModel = require("./view-model").viewModel;
+var Meme = require("./Meme");
 
 var _page;
+var meme;
 
 exports.loaded = function(args) {
 	_page = args.object;
-	_page.bindingContext = createMemeViewModel;
+	meme = new Meme();
+	_page.bindingContext = meme;
 
 	if (applicationModule.ios) {
 		_page.ios.title = "Create New";
 	}
 };
 
+exports.unloaded = function() {
+	meme.destroy();
+	meme = null;
+}
+
 exports.navigatedTo = function() {
 	//grab the image from the navigation context.
 	var selectedImage = _page.navigationContext;
-	createMemeViewModel.prepareNewMeme(selectedImage);
+	meme.setImage(selectedImage);
 };
