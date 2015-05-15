@@ -21,14 +21,20 @@ $ tns platform add ios
 $ tns platform add android
 ```
 
-Next you'll have to switch to the `app` directory and install the necessary dependencies from npm:
+JustMeme uses Babel to transpile the ES6-written source into ES5 that can run on JavaScriptCore and V8 in NativeScript. To setup a Gulp watcher to transpile your code, switch to the `src` directory and install the necessary dependencies from npm:
 
 ```
-$ cd app
+$ cd src
 $ npm install
 ```
 
-And finally you can run the app on your device of choice:
+Next run Gulp to start the watcher:
+
+```
+$ gulp
+```
+
+From there you're good to run the app on your device of choice. For instance the following runs the app on an iOS emulator:
 
 ```
 $ tns run ios --emulator
@@ -36,8 +42,8 @@ $ tns run ios --emulator
 
 ### Linting
 
-JustMeme uses Gulp to automate JSHint for code linting. To run it just run `gulp` within the `app` directory:
+JustMeme also uses Gulp to automate JSHint for code linting. To run JSHint against the source files just run `gulp jshint` within the `src` directory:
 
 ```
-$ gulp
+$ gulp jshint
 ```
