@@ -6,19 +6,20 @@ var utilities = require("../../shared/utilities");
 var analyticsMonitor = require("../../shared/analytics");
 
 var socialShare = require("../../node_modules/nativescript-social-share/social-share");
+
+
 var _ = require("../../node_modules/lodash/index");
 
 class Meme {
 	constructor() {
-		var that = this;
 		var debouncedRefresh = _.debounce(() => {
-			that.refresh();
+			this.refresh();
 		}, 50, { leading: true });
 
 		// Add an event listener to refresh the memeImage every time there is a change to the properties
 		this.addEventListener(observable.Observable.propertyChangeEvent, (changes) => {
 			// skip if memeImage changes
-			if (changes.propertyName === "memeImage" || !that.image) {
+			if (changes.propertyName === "memeImage" || !this.image) {
 				return;
 			}
 
